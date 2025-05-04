@@ -1,44 +1,58 @@
-<title>ToilatPlus+</title>
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ToilatPlus+</title>
+  <meta property="og:title" content="ToilatPlus">
+  <meta property="og:description" content="Welcome to Toilat+, Watch all the movies you love in this cheap experience!">
+
+  <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       width: 100%;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       background-color: black;
-      box-sizing: border-box;
     }
+
+    .scroll-wrapper {
+      height: 100vh;
+      width: 100vw;
+      overflow: auto;
+    }
+
     iframe {
       width: 100%;
-      height: 100%;
+      height: 200vh; /* simulate tall content */
       border: none;
-      box-sizing: border-box;
+      display: block;
     }
 
-  ::-webkit-scrollbar {
-  width: 12px;
-}
+    /* WebKit-based scrollbar styling */
+    .scroll-wrapper::-webkit-scrollbar {
+      width: 12px;
+    }
 
-::-webkit-scrollbar-track {
-  background: #000000;
-}
+    .scroll-wrapper::-webkit-scrollbar-track {
+      background: #000000;
+    }
 
-::-webkit-scrollbar-thumb {
-  background-color: #250307;
-  border-radius: 6px;
-  border: 2px solid #000000;
-}
+    .scroll-wrapper::-webkit-scrollbar-thumb {
+      background-color: #250307;
+      border-radius: 6px;
+      border: 2px solid #000000;
+    }
 
-/* Firefox scrollbar styling */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #250307 #000000;
-}
+    /* Firefox scrollbar styling */
+    .scroll-wrapper {
+      scrollbar-width: thin;
+      scrollbar-color: #250307 #000000;
+    }
   </style>
-  <meta property="og:title" content="ToilatPlus">
-  <meta property="og:description" content="Welcome to Toilat+, Watch all the movies you love in this cheap experience!">
-  <iframe src="https://szvyflix-proxied.vercel.app/movies.html" allowfullscreen=""></iframe>
+</head>
+<body>
+  <div class="scroll-wrapper">
+    <iframe src="https://szvyflix-proxied.vercel.app/movies.html" allowfullscreen></iframe>
+  </div>
+</body>
+</html>
